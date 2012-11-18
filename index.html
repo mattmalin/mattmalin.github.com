@@ -16,15 +16,21 @@
       })();
     </script>
     <style>
+	  /* CSS-only background resize and centering from http://css-tricks.com */
       img.bg {
         position: fixed;
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
         min-height: 100%;
-        min-width: 100%;
+        min-width: 1024px;
         top: 0;
         left: 0;
       }
+	  @media screen and (max-width: 1024px) {
+	  img.bg {
+	  	left: 50%;
+	  	margin-left: -512px;   /* 50% */
+	  }
     </style>
   </head>
   <body>
